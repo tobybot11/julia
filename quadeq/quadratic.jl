@@ -1,4 +1,5 @@
 # In quadratic.jl
+include("derivative.jl")
 
 function quadratic(f)
 	# Compute the first derivative of f
