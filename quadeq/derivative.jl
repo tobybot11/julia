@@ -4,7 +4,13 @@ function derivative(f)
 	# Look : you're reutrn a function of x
 	return function(x)  # yet another way to define functions in Julia
 		# pick a small value for h
-		h = 0.00001
+		# h = 0.00001 -> not good due to limitations in floating point 
+		#  arithmetic.. need to factor in machine epsilon
+		h = x == 0 ? sqrt(eps(Float64)) : sqrt(eps(Float64)) * x
+
+		# floating point arithmetic gymnastics
+		xph = x + h
+		dx = xph - x
 
 		# evaluate f at x+h
 		f1 = f(x + h)
