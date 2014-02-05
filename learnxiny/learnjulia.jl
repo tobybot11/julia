@@ -43,3 +43,14 @@ println("बलख")
 λ = π
 println(λ)
 
+# for loops iterate over iterables
+# Iterable types include Range, Array, Set, Dict, and String
+for animal=["dog", "cat", "mouse"]
+    println("$animal is a mammal")
+	# you can use $ to interpolate variables or expression into strings
+end
+
+# 5. Types
+
+println(typeof(5)) #=> Int64
+println(typeof(Int64)) #=> DataType
