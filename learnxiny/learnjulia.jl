@@ -20,3 +20,26 @@ println(35 / 5) #=> 7.0
 println(5/2) #=> 2.5 # dividing an Int by an Int always results in a Float
 println(div(5,2)) #=> 2 # for a truncated result, use div
 println(5\35) #=> 7.0 .. that's funny
+println(2^2) #=> 4 # power, not bitwise xor
+println(12%10) #=> 2
+
+# Enforce precedence with parentheses
+println((1 + 3) * 2) #=> 8
+
+
+# Accessing a previously unassigned variable is an error
+try 
+	some_other_var #=> ERROR: some_other_var not defined
+catch e
+	println(e)
+end
+
+# you can also use unicode characters
+बलख = 8 #=> 8
+println(बलख)
+println("बलख")
+
+# cool use of greek unicode characters
+λ = π
+println(λ)
+
